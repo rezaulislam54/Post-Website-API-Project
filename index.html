@@ -40,7 +40,7 @@
 
         <section class=" my-5" >          
             <div style="background-image: url(images/bgbanner.png);" class=" bg-[#12132D] rounded-3xl">
-                <div class=" flex justify-between items-center px-20 py-20 ">
+                <div class=" flex flex-col md:flex-row md:justify-between md:items-center gap-y-4 md:gap-y-0 lg:px-20 px-5 mx-auto py-20">
                     <div>
                         <h1 class="text-5xl font-bold text-white">Welcome to the <br> <span class="text-blue-400">ReTro</span>Forum</h1>
                         <p class="py-6 text-white"> Share your favorite opinion and win and wp <br> forum coffee mug!</p>
@@ -51,8 +51,8 @@
                             <button class="badge badge-info py-4 text-white text-[15px] px-6">Search</button>
                         </label>
                     </div>
-
-                    <div class="bg-white p-8 rounded-xl space-y-2  flex-row justify-between w-60">
+ 
+                    <div class="bg-white p-8 rounded-xl space-y-2  flex-row justify-between md:w-60">
                         <div class="flex justify-between">
                             <p>Registered Users </p>
                             <span >01</span>
@@ -83,16 +83,16 @@
                 <p>Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-5 mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-5 md:gap-5 gap-y-5 mt-8">
 
                 <div class="col-span-3 bg-blue-300 rounded-lg">
-
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, soluta.</p>
                 </div>
 
-                <div class="bg-gray-300 col-span-2 p-4 rounded-lg">
+                <div class="bg-gray-300 col-span-2  p-4 rounded-lg">
                     <div class="flex justify-between">
                         <h1 class="font-semibold text-[18px]">Title</h1>
-                        <h2>Mark as read <span>(4)</span></h2>
+                        <h2>Mark as read <span id="">(4)</span></h2>
                     </div>
 
                 </div>
@@ -102,7 +102,7 @@
 
         <section>
              <div style="background-image: url(images/bgbanner.png);" class=" bg-[#12132D] rounded-3xl">
-                <div class=" flex justify-between items-center px-20 py-20 ">
+                <div class=" flex flex-col md:flex-row md:justify-between gap-y-8 md:gap-y-0 lg:px-20 px-5 mx-auto py-20 ">
                     <div>
                         <h1 class="text-5xl font-bold text-white">Join Our Forum</h1>
                         <p class="py-6 text-white"> Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br> run unit tests and view the results directly within the app. </p>       
@@ -115,12 +115,40 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Latest Posts section -->
+        <section class="my-20">
+            <div class="text-center">
+                <h1 class="text-3xl font-bold mb-5">Latest Posts</h1>
+                <p>Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+            </div>
+
+
+            <div id="post-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-9 gap-5">
+
+            </div>
 
         </section>
     </main>
 
-    <footer>
+    <footer class="bg-[pink]">
+        <div class="container mx-auto text-center">
+             <div class="text-center ">
+                <h1 class="text-3xl font-bold mb-5">ReTro </h1>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br> piece of classical Latin literature from 45 BC</p>
+            </div>
 
+            <div class="space-x-4 text-2xl">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
     </footer>
+
+
+    <script src="js/index.js"></script>
 </body>
 </html>
