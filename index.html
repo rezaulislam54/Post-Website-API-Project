@@ -47,8 +47,8 @@
                         
                         
                         <label class="input input-bordered  flex items-center rounded-full ">
-                            <input type="text" class="grow " placeholder="Search here anything" />
-                            <button class="badge badge-info py-4 text-white text-[15px] px-6">Search</button>
+                            <input id="search-field" type="text" class="grow " placeholder="Search here anything" />
+                            <button onclick="handelSearchField()" class="badge badge-info py-4 text-white text-[15px] px-6">Search</button>
                         </label>
                     </div>
  
@@ -83,17 +83,19 @@
                 <p>Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-5 md:gap-5 gap-y-5 mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-6 md:gap-5 gap-y-5 mt-8">
 
-                <div class="col-span-3 bg-blue-300 rounded-lg">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, soluta.</p>
+                <div id="discus-container" class="col-span-4  ">
+                    
                 </div>
 
-                <div class="bg-gray-300 col-span-2  p-4 rounded-lg">
+                <div id="showContainer" class=" col-span-2 bg-gray-300 p-4 rounded-lg h-fit mt-5">
                     <div class="flex justify-between">
                         <h1 class="font-semibold text-[18px]">Title</h1>
-                        <h2>Mark as read <span id="">(4)</span></h2>
+                        <h2>Mark as read (<span id="redCount">0</span>)</h2>
                     </div>
+                   
+                   
 
                 </div>
             </div>
