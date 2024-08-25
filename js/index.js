@@ -11,12 +11,12 @@ const loadDiscusDisplay = (posts) =>{
     posts.forEach(data => {
     // console.log(data);
     const div = document.createElement('div');
-    div.classList=`m-5`;
+    div.classList=`my-5`;
     div.innerHTML=` 
         <div class="bg-gray-200 border border-black border-opacity-25 rounded-lg shadow-lg p-6">
             <div class="flex gap-x-5 ">
                 <div class=" relative flex-shrink-0">
-                    <div class="absolute -top-1 left-12 w-3 h-3 border rounded-full bg-green-700 border-gray-300 "></div>
+                    <div id="activeContainer" class="absolute -top-1 left-12 w-3 h-3 bg-green-700 border rounded-full border-gray-300 "></div>
                     <img src="${data.image}" alt="" class="w-14 h-14 border rounded-lg  dark:border-gray-300">
 		            </div>
                     <div class="">
@@ -35,20 +35,20 @@ const loadDiscusDisplay = (posts) =>{
                     </div>
                 </div>
             </div>
-`;
+        </div>`;
     discusContainer.appendChild(div);
-   })
+  });  
 }
 loadDiscus();
+
+
 
 // hendle search Field
 const handelSearchField = () =>{
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
-    console.log(searchText);
     loadDiscus(searchText);
 }
-
 
 // handle Details Vew
 const handleRedPost = async(id) => {
@@ -68,6 +68,7 @@ const handleRedPost = async(id) => {
         valueDisplay.textContent = value;
  }
 
+ 
 const showRedPost = (data) =>{
     const showContainer = document.getElementById('showContainer');
     const div = document.createElement('div');
@@ -83,6 +84,18 @@ const loadLatestPost = async () => {
     const revs = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
     const data = await revs.json();
     postDisplay(data);
+}
+
+// Active bg color set
+const setActiveBg = (isActive) =>{
+    console.log(isActive);
+    const activeContainer = document.getElementById('activeContainer');
+    if(isActive){
+        activeContainer.classList.add('bg-green-700');
+    }
+    else{
+        activeContainer.classList=('bg-red-900');
+    }
 }
 
 
